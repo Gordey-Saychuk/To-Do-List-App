@@ -1,6 +1,7 @@
 import './App.css';
 import Button from './components/Button/Button';
 import JornalItem from './components/JornalItem/JornalItem';
+import CardWrapper from './components/CardWrapper/CardWrapper';
 
 function App() { 
 
@@ -14,8 +15,14 @@ function App() {
 
   return (
     <>
+
      <Button>btn</Button>
+     <CardWrapper>
+      Новое 
+     </CardWrapper>
+     <CardWrapper>
      <JornalItem title={data[0].title} text={data[0].text } date={data[0].date}></JornalItem>
+     </CardWrapper>
     </>
   );
 }
