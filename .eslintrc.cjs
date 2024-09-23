@@ -3,7 +3,7 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended',
+    'plugin:react/recommended', 
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
@@ -19,7 +19,9 @@ module.exports = {
     ],
     "semi": ["error", "always", {"omitLastInOneLineBlock": false}],
     "comma-dangle": ["error", "never"],
-    quotes: ["error", "single"]
+    quotes: ["error", "single"],
+    'react/prop-types': [0],
+    'indent': ['error', 'tab']
   },
 }
  
