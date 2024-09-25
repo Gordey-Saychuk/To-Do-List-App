@@ -2,14 +2,14 @@ import React from 'react';
 import style from './Form.module.css';
 import Button from '../Button/Button';
 
-export default function Form() {
+export default function Form({onSubmit}) {
 
 	function SubmitForm(e){
 		e.preventDefault();
 		console.log(e.target[0].value);
 		const FormDate = new FormData(e.target);
 		const formProps = Object.fromEntries(FormDate);
-		console.log(formProps);
+		onSubmit(formProps);
 	}
 
 	return (
