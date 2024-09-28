@@ -4,3 +4,8 @@
   gap: 30px;
   width: 500px;
 }
+
+.invalid{
+  border: 1px solid red;
+  background-color: rgb(117, 21, 21);
+}

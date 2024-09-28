@@ -34,7 +34,7 @@ function App() {
 			text: item.description,
 			title: item.text,
 			date: new Date(item.date),
-			id: Math.max(...oldItem.map(i => i.id)) + 1
+			id: oldItem > 0 ? Math.max(...oldItem.map(i => i.id)) + 1 : 1
 		}]);
 		console.log(data);
 	}
@@ -50,13 +50,16 @@ function App() {
 				<CardWrapper>
       Новое  
 				</CardWrapper>
-
-				{sortData.map((el) =>( 
-					<CardWrapper key={el.id}>
-						<JornalItem  title={el.title} text={el.text } date={el.date}></JornalItem>
-            
-					</CardWrapper> 
-				))}
+				{
+					sortData.length < 1 ? <p>Нет</p> :
+						sortData.map((el) =>( 
+							<CardWrapper key={el.id}>
+								<JornalItem  title={el.title} text={el.text } date={el.date}></JornalItem>
+              
+							</CardWrapper> 
+						))
+				}
+				
 
 
 				
